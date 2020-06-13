@@ -1,0 +1,17 @@
+<div>
+  <button (click)="content?.new()">New</button>
+  <button
+    [attr.disabled]="!content?.model.title || null"
+    (click)="content?.save()"
+  >
+    Save
+  </button>
+</div>
+
+<div>
+  <div loader-host></div>
+</div>
+
+<div *templateHolder="'footer'">
+  footer
+</div>
